@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body text-[#242424] antialiased bg-white;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight text-[#242424];
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #007bc4;
+}
+
+/* WoodMart pill button */
+.btn-primary {
+  @apply bg-[#007bc4] hover:bg-[#006aa8] text-white font-medium py-2 px-6 rounded-full transition-all duration-200 inline-flex items-center justify-center text-sm shadow-sm hover:shadow active:scale-[0.98];
+}
+
+.btn-secondary {
+  @apply bg-[#242424] hover:bg-[#111111] text-white font-medium py-2 px-6 rounded-full transition-all duration-200 inline-flex items-center justify-center text-sm shadow-sm active:scale-[0.98];
+}
+
+.btn-outline {
+  @apply border border-[#e1e1e1] hover:border-[#007bc4] hover:text-[#007bc4] text-[#242424] font-medium py-2 px-6 rounded-full transition-all duration-200 inline-flex items-center justify-center text-sm active:scale-[0.98];
+}
+
+/* Line clamp 2 */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
